@@ -1,6 +1,8 @@
 package com.practice.filmorate.model;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
@@ -9,7 +11,7 @@ import lombok.Data;
 
 @Data
 public class Film {
-    private Integer id;
+    private long id;
     @NotNull
     private String name;
     @NotNull
@@ -18,4 +20,6 @@ public class Film {
     private LocalDate releaseDate;
     @Positive
     private int duration;
+
+    private final Set<Long> likes = new HashSet<>();
 }
