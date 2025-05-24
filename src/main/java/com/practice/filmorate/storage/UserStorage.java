@@ -20,6 +20,6 @@ public interface UserStorage {
 
     List<User> findCommonFriend(long userId, long friendId);
 
-   Optional<User> findById(long userId);
+    Optional<User> findById(long userId);
 
 }
